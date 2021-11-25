@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  header: '?VHozaS85TU9uUnhTR2FpMWh0eUJCZz09=gAAAAABgAGpunQZzKslbNqIL71S6nhjanaqWYmni6w7Bv_i0nc49t4WyDc3X6fPWVYzx2Lg_3b8PabFJ5RUF2rS43OGWXQ-Yuw==',
+  api:{
+    base : 'https://gestion.promo.ec/promo/',
+    baseBd: 'http://localhost:4000/api'
+  },
+  localStorage:{
+    tokenUsuario:'9201_D2PR1#2',
+    infoGestion:'9201_D2PR1#3'
+  }
 };
 
 /*

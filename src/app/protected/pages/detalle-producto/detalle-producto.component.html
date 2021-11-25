@@ -1,0 +1,44 @@
+<app-header></app-header>
+<br>
+<div class="container">
+    <div *ngFor="let item of producto" class="grid">
+        <div *ngIf="item.id_producto == idProducto" class="row">
+            <div class="col-md-6" style="text-align-last: center;">
+                <div class="col align-self-center">
+                <img src="https://gestion.promo.ec/{{item.imagenes}}" width="90%" alt="">
+                </div>
+                </div>
+            <div class="col-md-6">
+                <div class="container">
+                    
+                    <h1 class="display-3">{{item.nombre}}</h1>
+                    <hr>
+
+                    <b>Codigo principal:</b>
+                     {{item.cod_principal}}
+                    <br>
+                    Descripción: {{item.descripcion}}
+                    <br>
+                    
+                    Precio: ${{item.precio}}
+
+                    <br>
+                    <div class="" role="toolbar" aria-label="Toolbar with button groups">
+                    
+                      <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group" role="group" aria-label="First group">
+                          <button type="button" class="btn btn-outline-secondary">-</button>
+                          <button type="button" class="btn btn-outline-secondary">1</button>
+                          <button type="button" class="btn btn-outline-secondary">+</button>
+                        </div>
+                        
+                    </div>
+                    <br>
+                      <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button">Agregar al carrito</button>
+                      </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

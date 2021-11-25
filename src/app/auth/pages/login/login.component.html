@@ -1,0 +1,15 @@
+<form 
+  [formGroup]="miFormulario"
+  (ngSubmit)="login()"
+  autocomplete="off">
+    <div class="mb-3">
+      <input placeholder="Usuario" formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Contraseña" formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="d-grid gap-2">
+      <button class="flex" [disabled]="miFormulario.invalid" type="submit" class="btn btn-danger">Login</button>
+    </div>
+    
+  </form>

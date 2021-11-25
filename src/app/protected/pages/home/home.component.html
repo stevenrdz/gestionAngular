@@ -1,0 +1,26 @@
+
+  <app-header></app-header>
+  <br>
+  <div class="container">
+      
+    <div  class="row">
+      <div *ngFor="let item of producto" class="col-md-4">
+        <div></div>
+        <div class="card" >
+          <img src="https://gestion.promo.ec/{{item.imagenes}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            
+            <div class="row">
+              <div class="col">
+                <h5 class="card-title">{{item.nombre}}</h5>
+              </div>
+              <div class="col" style="text-align: right;"><p class="card-text">$ {{item.precio}}</p></div>
+            </div>
+            <p class="card-text">{{item.descripcion}}</p>
+            <a [routerLink]="['detalle', item.id_producto]" style="text-align: right;float: right;" href="#" class="btn btn-primary">+ Detalle</a>
+          </div>
+        </div>
+        <div><hr></div>
+      </div>
+    </div>
+  </div>
