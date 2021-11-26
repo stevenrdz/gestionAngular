@@ -21,13 +21,8 @@ export class LoginComponent{
     private fb: FormBuilder,
     private router: Router,
     private authService: AuthService) { }
-
-    private KEY_INFO_GESTION: string = environment.localStorage.infoGestion;
   
     login(){
-      console.log(this.miFormulario.value);
-      // console.log(this.miFormulario.valid);
-  
       const { email, password } = this.miFormulario.value;
 
       this.authService.login(email, password)

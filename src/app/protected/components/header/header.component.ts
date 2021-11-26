@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../auth/services/auth.service';
+import { Carrito } from '../../interfaces/carrito.interface';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,9 @@ import { AuthService } from '../../../auth/services/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
+  cantidadCarrito!: Carrito;
+  valorNotificacion: Number = 0;
+
   constructor(private router: Router,
     private authService :AuthService) { }
 
@@ -18,10 +22,11 @@ export class HeaderComponent implements OnInit {
     }
     
   ngOnInit(): void {
+    this.cantidadCarrito =  JSON.parse(localStorage.getItem('datos') || '{}')
+    this.valorNotificacion = this.cantidadCarrito?.datos?.carrito;
   }
 
   logout(){
-
     this.router.navigateByUrl('/auth');
     this.authService.logout();
   }

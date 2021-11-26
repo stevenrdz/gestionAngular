@@ -16,8 +16,7 @@ export class HomeComponent implements OnInit{
 
   constructor(private router: Router,
     private productoService: ProductosService,
-    private authService: AuthService,
-    private activateRouter: ActivatedRoute) { 
+    private authService: AuthService) { 
     this.consultarProductos();
   }
   ngOnInit(){
@@ -28,16 +27,13 @@ export class HomeComponent implements OnInit{
   }
   
   consultarProductos(){
-    this.productoService.listarProductos().subscribe((res => {
-      if (res.estado) {
-        
-        this.producto = res.productos
-        console.log(this.producto)
+    this.productoService.listarProductos().subscribe(
+      (res => {
+        if (res.estado) { this.producto = res.productos }
+        else{ (res) }
       }
-      else{
-        (res)
-      }
-    }))
+      )
+    );
   }
 
 }
