@@ -1,46 +1,46 @@
 # PruebaApp
 
-Angular - TypeScript
+## Angular - TypeScript
 
-Proyecto desplegado:
+## Proyecto desplegado:
 https://node-ng-backend.herokuapp.com/auth/login
 
-Login:
--user: admin@gmail.com
--pw: 123456
+## Login:
+- user: admin@gmail.com
+- pw: 123456
 
-Pantallas:
+## Pantallas:
 - Login
 - Listar productos
 - Ver detalle de un producto
 - Lista de productos del carrito
 
-Angular:
-Consumo de API REST
-LocalStorage
-CanGuards
-Reactive Form
-Modularidad
-Interface
-Enviroments
-Pages - Components
-Services
-Routes
+## Angular.-
+- Consumo de API REST
+- LocalStorage
+- CanGuards
+- Reactive Form
+- Modularidad
+- Interface
+- Enviroments
+- Pages - Components
+- Services
+- Routes
 
-Backend (Node express): 
-JWT
-Models
-Helpers
-Middleware
-Controllers
-Routes
+## Backend (Node).- 
+- JWT
+- Models
+- Helpers
+- Middleware
+- Controllers
+- Routes
 
-BD: MongoDB
+## BD: MongoDB
 
-Boostrap:
-Responsive
-Cards
-Grid
+## Boostrap.-
+- Responsive
+- Cards
+- Grid
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
