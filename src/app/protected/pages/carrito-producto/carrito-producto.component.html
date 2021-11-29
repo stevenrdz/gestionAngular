@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row g-2">
         <div class="col-6">
-            <div class=" fixed">
+            <div *ngIf="this.historialCarrito.datos != null" class="fixed">
                 <div *ngFor="let item of producto">
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
@@ -21,7 +21,13 @@
                         </div>
                     </div>
                 </div>
+                
                 <hr>
+            </div>
+            <div *ngIf="this.historialCarrito.datos == null" class="fixed">
+                <div class="row g-0">
+                    <p>No hay productos en el carrito</p>
+                </div>
             </div>
             
           <!-- <div class="p-3 border bg-light">Custom column padding</div> -->

@@ -5,6 +5,7 @@ import { Producto } from '../../interfaces/productos.interface';
 import { Carrito } from '../../interfaces/carrito.interface';
 
 import Swal from "sweetalert2";
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-carrito-producto',
@@ -19,13 +20,21 @@ export class CarritoProductoComponent implements OnInit {
   historialCarrito!: Carrito;
   totalProductos: Number = 0;
 
-  constructor(private productoService: ProductosService) { }
+  constructor(private productoService: ProductosService,
+    private authService :AuthService) { }
+
+  get usuario(){
+    return this.authService.usuario;
+  }
 
   ngOnInit(): void {
     this.historialCarrito = JSON.parse(localStorage.getItem('datos') || '{}')
-    for(let item of this.historialCarrito.datos.historial){
-      this.consultarProductos(Number(item.id));
+    if(this.historialCarrito.datos){
+      for(let item of this.historialCarrito.datos.historial){
+        this.consultarProductos(Number(item.id));
+      }
     }
+    
   }
 
   consultarProductos(id: Number){

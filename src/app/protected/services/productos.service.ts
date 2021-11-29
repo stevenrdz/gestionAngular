@@ -10,7 +10,6 @@ import { ProductosPromo } from '../interfaces/productos.interface';
 export class ProductosService {
 
   private baseUrl: string = environment.api.base;
-  private KEY_TOKEN_USUARIO: string = environment.localStorage.tokenUsuario;
   private header: string = environment.header;
 
   constructor(private http:HttpClient) { }

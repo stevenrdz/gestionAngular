@@ -31,7 +31,6 @@ export class DetalleProductoComponent implements OnInit, OnDestroy {
       this.consultarProductos(this.idProducto)
   }
   ngOnDestroy(): void {
-    console.log("Destroy")
     this.pedidosSubscription?.unsubscribe();
   }
 
@@ -55,7 +54,7 @@ export class DetalleProductoComponent implements OnInit, OnDestroy {
       this.historialCarrito?.datos.historial
         .push({'id': this.idProducto,'cantidad': this.cantidadProducto});
       localStorage.setItem('datos', JSON.stringify(this.historialCarrito));
-      console.log(JSON.parse(localStorage.getItem('datos') || '{}') )
+      // console.log(JSON.parse(localStorage.getItem('datos') || '{}') )
 
     }else{
       this.carritoCompra = {
@@ -65,7 +64,7 @@ export class DetalleProductoComponent implements OnInit, OnDestroy {
         }
       }
       localStorage.setItem('datos', JSON.stringify(this.carritoCompra));
-      console.log(JSON.parse(localStorage.getItem('datos') || '{}') )
+      // console.log(JSON.parse(localStorage.getItem('datos') || '{}') )
     }
   }
 
