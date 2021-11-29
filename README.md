@@ -3,7 +3,7 @@
 ## Angular - TypeScript
 
 ## Proyecto desplegado:
-https://node-ng-backend.herokuapp.com/auth/login
+https://node-ng-backend.herokuapp.com/
 
 ## Login:
 - user: admin@gmail.com
