@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { DetalleProductoComponent } from './pages/detalle-producto/detalle-producto.component';
 import { CarritoProductoComponent } from './pages/carrito-producto/carrito-producto.component';
+import { ValidarTokenGuard } from '../guards/validar-token.guard';
 
 const routes: Routes = [
   {
@@ -17,10 +18,13 @@ const routes: Routes = [
   {
     path: 'detalle/:id', 
     component: DetalleProductoComponent,
+    
   },
   {
     path: 'carrito', 
     component: CarritoProductoComponent,
+    canActivate: [ValidarTokenGuard],
+    canLoad: [ValidarTokenGuard]
   }
 
 ];

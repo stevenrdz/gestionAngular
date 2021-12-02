@@ -10,12 +10,11 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./protected/protected.module').then( m => m.ProtectedModule ),
-    canActivate: [ValidarTokenGuard],
-    canLoad: [ValidarTokenGuard]
+    
   },
   {
     path: '**',
-    redirectTo: 'auth'
+    redirectTo: 'home'
   }
 ];
 
